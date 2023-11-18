@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:itsaplant/planta5.dart';
-import 'package:itsaplant/planta6.dart';
-import 'package:itsaplant/planta7.dart';
+import 'package:itsaplant/planta8.dart';
+import 'package:itsaplant/planta9.dart';
+import 'package:itsaplant/planta10.dart';
 
 class CustomListItem {
   final String imagePath;
@@ -22,26 +22,26 @@ class ListaPlants extends StatelessWidget {
     final List<CustomListItem> items = [
       CustomListItem(
         imagePath: 'img/foto1.png',
-        title: 'Hamatocactus setispinus. “viznaga ganchuda”.',
+        title: 'Yucca Rostrata. “palmito”.',
         onTap: () {
           Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => Planta5()));
+              .push(MaterialPageRoute(builder: (context) => Planta8()));
         },
       ),
       CustomListItem(
         imagePath: 'img/foto1.png',
-        title: 'Echinocereus perbellus. “cactus arcoiris, huevo de toro”.',
+        title: 'Fouquieria splendens. “Ocotillo o albarda”.',
         onTap: () {
           Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => Planta6()));
+              .push(MaterialPageRoute(builder: (context) => Planta9()));
         },
       ),
       CustomListItem(
         imagePath: 'img/foto1.png',
-        title: 'Echinocereus enneacanthus. “Strawberry cactus”.',
+        title: 'Euphorbia antisyphilitica. “Candelilla”.',
         onTap: () {
           Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => Planta7()));
+              .push(MaterialPageRoute(builder: (context) => Planta10()));
         },
       ),
 

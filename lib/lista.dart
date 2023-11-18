@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:itsaplant/planta1.dart';
 import 'package:itsaplant/planta2.dart';
 import 'package:itsaplant/planta3.dart';
+import 'package:itsaplant/planta4.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -77,6 +78,14 @@ class ListaPlants extends StatelessWidget {
         onTap: () {
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (context) => Planta3()));
+        },
+      ),
+      CustomListItem(
+        imagePath: 'img/foto1.png',
+        title: 'Retama sphaerocarpa. “Retama o mezquite Amarillo”',
+        onTap: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => Planta4()));
         },
       ),
       // Agrega más elementos de lista según sea necesario

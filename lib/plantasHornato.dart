@@ -2,33 +2,33 @@ import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:itsaplant/lista.dart';
-import 'package:itsaplant/planta1.dart';
-import 'package:itsaplant/planta2.dart';
-import 'package:itsaplant/planta3.dart';
-import 'package:itsaplant/planta4.dart';
+import 'package:itsaplant/lista7.dart';
+import 'package:itsaplant/planta20.dart';
+import 'package:itsaplant/planta21.dart';
+import 'package:itsaplant/planta22.dart';
+import 'package:itsaplant/planta23.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: EspeciesNativas(),
+    home: PlantasHornato(),
   ));
 }
 
-class EspeciesNativas extends StatefulWidget {
-  const EspeciesNativas({Key? key}) : super(key: key);
+class PlantasHornato extends StatefulWidget {
+  const PlantasHornato({Key? key}) : super(key: key);
 
   @override
-  State<EspeciesNativas> createState() => _EspeciesNativasState();
+  State<PlantasHornato> createState() => _PlantasHornatoState();
 }
 
-class _EspeciesNativasState extends State<EspeciesNativas> {
+class _PlantasHornatoState extends State<PlantasHornato> {
   ScanResult? scanResult;
 
   final Map<String, Widget> plantScreens = {
-    'Planta1': Planta1(),
-    'Planta2': Planta2(),
-    'Planta3': Planta3(),
-    'Planta4': Planta4(),
+    'Planta20': Planta20(),
+    'Planta21': Planta21(),
+    'Planta22': Planta22(),
+    'Planta23': Planta23(),
   };
 
   @override

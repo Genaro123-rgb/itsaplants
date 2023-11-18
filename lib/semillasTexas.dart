@@ -2,33 +2,27 @@ import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:itsaplant/lista.dart';
-import 'package:itsaplant/planta1.dart';
-import 'package:itsaplant/planta2.dart';
-import 'package:itsaplant/planta3.dart';
-import 'package:itsaplant/planta4.dart';
+import 'package:itsaplant/lista4.dart';
+import 'package:itsaplant/planta11.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: EspeciesNativas(),
+    home: SemillasTexas(),
   ));
 }
 
-class EspeciesNativas extends StatefulWidget {
-  const EspeciesNativas({Key? key}) : super(key: key);
+class SemillasTexas extends StatefulWidget {
+  const SemillasTexas({Key? key}) : super(key: key);
 
   @override
-  State<EspeciesNativas> createState() => _EspeciesNativasState();
+  State<SemillasTexas> createState() => _SemillasTexasState();
 }
 
-class _EspeciesNativasState extends State<EspeciesNativas> {
+class _SemillasTexasState extends State<SemillasTexas> {
   ScanResult? scanResult;
 
   final Map<String, Widget> plantScreens = {
-    'Planta1': Planta1(),
-    'Planta2': Planta2(),
-    'Planta3': Planta3(),
-    'Planta4': Planta4(),
+    'Planta11': Planta11(),
   };
 
   @override
