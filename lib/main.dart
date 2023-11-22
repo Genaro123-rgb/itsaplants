@@ -1,8 +1,12 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// Tus importaciones existentes
+// ignore_for_file: prefer_const_constructors, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:itsaplant/cetaceasMunicipio.dart';
-import 'package:itsaplant/especiesNativas.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:itsaplant/categorias/cetaceasMunicipio.dart';
+import 'package:barcode_scan2/barcode_scan2.dart';
+import 'package:flutter/services.dart';
+import 'package:itsaplant/util/menuButton.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,61 +26,65 @@ class MainMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(39, 43, 45, 1),
       appBar: AppBar(
-        title: Text('Menú Principal'),
-        backgroundColor: Colors.green,
+        title: Text(
+          'ITSA Plants',
+          style: GoogleFonts.orelegaOne(
+            textStyle: TextStyle(
+              fontSize: 30,
+            ),
+          ),
+        ),
+        backgroundColor: const Color.fromARGB(92, 147, 109, 1),
       ),
-      body: GridView.count(
-        crossAxisCount: 2,
-        children: <Widget>[
-          MenuButton(
-            title: 'Especies Nativas',
-            icon: Icons.home,
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => EspeciesNativas()), // Navega a EspeciesNativas
-              );
-            },
-          ),
-          MenuButton(
-            title: 'Especies Nativas hola alemi',
-            icon: Icons.home,
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CetaceasMunicipio()), // Navega a EspeciesNativas
-              );
-            },
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: GridView.count(
+          crossAxisCount: 2,
+          crossAxisSpacing: 10, // Espacio horizontal entre los botones
+          mainAxisSpacing: 10, // Espacio vertical entre los botones
+          childAspectRatio: 2.3 / 2, // Proporción del tamaño de los botones
+          children: <Widget>[
+            MenuButton(
+              title: 'Cetáceas Municipio',
+              icon: Icons.water,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CetaceasMunicipio()),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => _scanQR(context),
+        child: Icon(Icons.qr_code_scanner),
+        backgroundColor: const Color.fromARGB(92, 147, 109, 1),
       ),
     );
   }
-}
 
-class MenuButton extends StatelessWidget {
-  final String title;
-  final IconData icon;
-  final VoidCallback onTap;
-
-  const MenuButton({Key? key, required this.title, required this.icon, required this.onTap}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: InkWell(
-        onTap: onTap, // Usa la función de callback aquí
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Icon(icon, size: 70.0),
-              Text(title),
-            ],
-          ),
-        ),
-      ),
-    );
+  Future<void> _scanQR(BuildContext context) async {
+    try {
+      final result = await BarcodeScanner.scan();
+      // Aquí manejas el resultado del escaneo, por ejemplo, mostrando un mensaje
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Resultado del escaneo: ${result.rawContent}')),
+      );
+    } on PlatformException catch (e) {
+      if (e.code == BarcodeScanner.cameraAccessDenied) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+              content: Text('Se requiere permiso de cámara para escanear QR')),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error desconocido: $e')),
+        );
+      }
+    }
   }
 }
