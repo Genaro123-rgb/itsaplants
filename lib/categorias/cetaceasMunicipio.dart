@@ -7,18 +7,18 @@ import 'package:itsaplant/util/customListItem.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: CetaceasMunicipio(),
+    home: CactaceasMunicipio(),
   ));
 }
 
-class CetaceasMunicipio extends StatefulWidget {
-  const CetaceasMunicipio({Key? key}) : super(key: key);
+class CactaceasMunicipio extends StatefulWidget {
+  const CactaceasMunicipio({Key? key}) : super(key: key);
 
   @override
-  State<CetaceasMunicipio> createState() => _CetaceasMunicipioState();
+  State<CactaceasMunicipio> createState() => _CactaceasMunicipioState();
 }
 
-class _CetaceasMunicipioState extends State<CetaceasMunicipio> {
+class _CactaceasMunicipioState extends State<CactaceasMunicipio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +45,7 @@ class _CetaceasMunicipioState extends State<CetaceasMunicipio> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Planta1()),
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
                 );
               },
             ),
@@ -59,7 +59,7 @@ class _CetaceasMunicipioState extends State<CetaceasMunicipio> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Planta1()),
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
                 );
               },
             ),
@@ -73,7 +73,7 @@ class _CetaceasMunicipioState extends State<CetaceasMunicipio> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Planta1()),
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
                 );
               },
             ),

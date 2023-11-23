@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:itsaplant/plantas/planta1.dart';
 import 'package:itsaplant/util/customListItem.dart';
 
 void main() {
@@ -38,41 +39,29 @@ class _cactaceasDeserticas extends State<cactaceasDeserticas> {
         child: SingleChildScrollView(
           child: Column(children: [
             CustomListItem(
-              imagePath: "img/logotipoTecNM.png",
-              commonName: "Maguey blanco o maguey serrano o mezcal",
-              scientificName: "Agave americana.",
+              imagePath: "img/cenizo.jpeg",
+              commonName: "prueba",
+              scientificName: "hola",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
+                );
+              },
             ),
             SizedBox(
               height: 10,
             ),
             CustomListItem(
-              imagePath: "img/LogotipoTecNM.png",
-              commonName: "Cegadora ondulada",
-              scientificName: "Opuntia microdasys undulata.",
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            CustomListItem(
-              imagePath: "img/LogotipoTecNM.png",
-              commonName: "Nopal monstruoso",
-              scientificName: "Opuntia monacantha.",
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            CustomListItem(
-              imagePath: "img/LogotipoTecNM.png",
-              commonName: "Maguey Amarillo",
-              scientificName: "Agave americana var. marginata.",
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            CustomListItem(
-              imagePath: "img/LogotipoTecNM.png",
-              commonName: "Cardón",
-              scientificName: "Pachycereus Pecten-Aboriginum.",
+              imagePath: "img/cenizo.jpeg",
+              commonName: "prueba",
+              scientificName: "hola",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
+                );
+              },
             ),
             SizedBox(
               height: 10,

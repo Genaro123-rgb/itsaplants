@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:itsaplant/plantas/planta1.dart';
 import 'package:itsaplant/util/customListItem.dart';
 
 void main() {
@@ -41,22 +42,12 @@ class _especiesNativasState extends State<especiesNativas> {
               imagePath: "img/cenizo.jpeg",
               commonName: "prueba",
               scientificName: "hola",
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            CustomListItem(
-              imagePath: "img/hizache.jpg",
-              commonName: "prueba",
-              scientificName: "hola",
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            CustomListItem(
-              imagePath: "img/mezquite.jpg",
-              commonName: "prueba",
-              scientificName: "hola",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
+                );
+              },
             ),
             SizedBox(
               height: 10,
@@ -65,6 +56,26 @@ class _especiesNativasState extends State<especiesNativas> {
               imagePath: "img/cenizo.jpeg",
               commonName: "prueba",
               scientificName: "hola",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
+                );
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            CustomListItem(
+              imagePath: "img/cenizo.jpeg",
+              commonName: "prueba",
+              scientificName: "hola",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
+                );
+              },
             ),
             SizedBox(
               height: 10,
