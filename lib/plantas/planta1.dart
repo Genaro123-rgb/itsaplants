@@ -6,12 +6,50 @@ class Planta1 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text('Leucophyllum frutescens. “Cenizo”.'),
+        title: Text('Detalle de la Planta'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
       ),
-      body: Center(
-        child: Text(
-            'También conocido como cenizo, es un arbusto o pequeño árbol que se encuentra en el norte de México y el suroeste de los Estados Unidos. Es una planta muy común en la ciudad de Acuña, Coahuila, donde se puede encontrar en jardines, parques y áreas naturales. El cenizo es una planta de hoja perenne que puede crecer hasta 3 metros de altura. Tiene hojas pequeñas y ovaladas que son de color verde oscuro. Las flores son pequeñas y blancas y se producen en racimos. El cenizo es una planta muy resistente a la sequía y al calor. Es una planta muy popular para la jardinería porque es fácil de cuidar y requiere poco mantenimiento.En la ciudad el cenizo se puede encontrar en una variedad de lugares. Es una planta común en los jardines residenciales, donde se utiliza como planta de borde o como planta de acento. También se puede encontrar en parques y áreas naturales, donde proporciona sombra y hábitat para la vida silvestre. El cenizo es una planta importante para el ecosistema de la ciudad de Acuña. Es una fuente de alimento y refugio para la vida silvestre, y ayuda a regular la temperatura del aire. Aquí hay algunos datos adicionales sobre el cenizo en la ciudad de Acuña: La temporada de floración del cenizo es de mayo a julio. Las flores del cenizo atraen a las mariposas y a otros insectos polinizadores. Los frutos del cenizo son comestibles y se pueden utilizar para hacer mermelada o jalea.'),
+      body: Column(
+        children: <Widget>[
+          plantaImagen,
+          Expanded(
+            child: SingleChildScrollView(
+              child: SeccionTexto,
+            ),
+          ),
+        ],
       ),
     );
   }
 }
+
+Widget plantaImagen = Container(
+  height: 150, // Altura fija para la imagen
+  child: Image.asset(
+    'img/mezquite.jpg',
+    fit: BoxFit.fill,
+  ),
+);
+
+Widget SeccionTexto = Container(
+  padding: const EdgeInsets.all(32),
+  child: const Text(
+    'Yucca rostrata es una planta que alcanza los 4,5 m de altura. '
+    'Tiene delgadas hojas que surgen de una roseta simétrica. '
+    'Las inflorescencias de pequeñas flores de color blanco aparecen en otoño.'
+    'Como una de las yucas más difíciles, Yucca rostrata se puede cultivar con éxito'
+    'al aire libre hasta la zona de seguridad USDA y es popular en muchas ciudades desérticas'
+    'como Palm Springs, CA, Phoenix, AZ y Las Vegas, NV, en el suroeste de Estados Unidos.'
+    'La planta similar a un árbol también se cultiva comúnmente en las zonas de jardín 7 y 8'
+    'en El Paso, Texas, Albuquerque, Nuevo México, Salt Lake City, Utah y Denver, Colorado.'
+    'Más recientemente, Yucca rostrata se está utilizando en la playa en las zonas costeras'
+    'de la Costa Este, y se puede encontrar en la costa de Carolina del Norte, Virginia Beach,'
+    'VA, Ocean City, MD, y en Long Island, y NY.'
+
+    'En el sur de Europa Yucca rostrata se cultiva en la región mediterránea subtropical, incluyendo el sur de Italia, España, Grecia y el sur de Francia. Rostrata también se cultiva en menor número norte en Europa templada en el Reino Unido, Alemania y otras áreas. En estas últimas zonas, el cultivo suele ser más difícil en los veranos fríos y los climas húmedos que se encuentran en estas zonas. Sin embargo, muchas personas en las partes más frías y húmedas del noroeste de Europa cubren Yucca rostrata en invierno para mantener la humedad fuera de la planta. Yucca rostrata también es popular en Australia y en ocasiones se utiliza como una planta de especímenes en paisajes domésticos.',
+    softWrap: true,
+  ),
+);

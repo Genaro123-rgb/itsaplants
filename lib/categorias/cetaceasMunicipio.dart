@@ -1,8 +1,8 @@
-
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:itsaplant/plantas/planta1.dart';
 import 'package:itsaplant/util/customListItem.dart';
 
 void main() {
@@ -19,7 +19,6 @@ class CetaceasMunicipio extends StatefulWidget {
 }
 
 class _CetaceasMunicipioState extends State<CetaceasMunicipio> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,14 +38,48 @@ class _CetaceasMunicipioState extends State<CetaceasMunicipio> {
         padding: EdgeInsets.all(16),
         child: SingleChildScrollView(
           child: Column(children: [
-            CustomListItem(imagePath: "img/cenizo.jpeg", commonName: "prueba", scientificName: "hola",),
-            SizedBox(height: 10,),
-            CustomListItem(imagePath: "img/hizache.jpg", commonName: "prueba", scientificName: "hola",),
-            SizedBox(height: 10,),
-            CustomListItem(imagePath: "img/mezquite.jpg", commonName: "prueba", scientificName: "hola",),
-            SizedBox(height: 10,),
-            CustomListItem(imagePath: "img/cenizo.jpeg", commonName: "prueba", scientificName: "hola",),
-            SizedBox(height: 10,),
+            CustomListItem(
+              imagePath: "img/cenizo.jpeg",
+              commonName: "prueba",
+              scientificName: "hola",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Planta1()),
+                );
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            CustomListItem(
+              imagePath: "img/cenizo.jpeg",
+              commonName: "prueba",
+              scientificName: "hola",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Planta1()),
+                );
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            CustomListItem(
+              imagePath: "img/cenizo.jpeg",
+              commonName: "prueba",
+              scientificName: "hola",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Planta1()),
+                );
+              },
+            ),
+            SizedBox(
+              height: 10,
+            ),
           ]),
         ),
       ),
@@ -55,4 +88,3 @@ class _CetaceasMunicipioState extends State<CetaceasMunicipio> {
     );
   }
 }
-
