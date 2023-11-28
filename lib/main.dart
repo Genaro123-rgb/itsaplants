@@ -7,6 +7,7 @@ import 'package:itsaplant/categorias/cactaceasDeserticas.dart';
 import 'package:itsaplant/categorias/cetaceasMunicipio.dart';
 import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:flutter/services.dart';
+import 'package:itsaplant/categorias/especiesNativas.dart';
 import 'package:itsaplant/util/menuButton.dart';
 
 void main() {
@@ -45,7 +46,7 @@ class MainMenu extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 10, // Espacio horizontal entre los botones
           mainAxisSpacing: 10, // Espacio vertical entre los botones
-          childAspectRatio: 2.3 / 2, // Proporción del tamaño de los botones
+          childAspectRatio: 2 / 2, // Proporción del tamaño de los botones
           children: <Widget>[
             MenuButton(
               title: 'Cactáceas Municipio',
@@ -64,6 +65,16 @@ class MainMenu extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => cactaceasDeserticas()),
+                );
+              },
+            ),
+            MenuButton(
+              title: 'Especies Nativas',
+              icon: Icons.water,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => especiesNativas()),
                 );
               },
             ),

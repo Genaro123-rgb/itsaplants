@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:itsaplant/plantas/planta1.dart';
+import 'package:itsaplant/plantas/planta.dart';
 import 'package:itsaplant/util/customListItem.dart';
 
 void main() {
@@ -45,7 +45,7 @@ class _especiesNativasState extends State<especiesNativas> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imgPath: "img/cenizo.jpeg", descripcion: "Descripcion",)),
                 );
               },
             ),
@@ -59,7 +59,7 @@ class _especiesNativasState extends State<especiesNativas> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imgPath: "img/cenizo.jpeg", descripcion: "Descripcion",)),
                 );
               },
             ),
@@ -73,7 +73,7 @@ class _especiesNativasState extends State<especiesNativas> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imagePath: "img/cenizo.jpeg", description: "Descripcion",)),
+                  MaterialPageRoute(builder: (context) => Planta(titulo: "Hola", imgPath: "img/cenizo.jpeg", descripcion: "Descripcion",)),
                 );
               },
             ),
