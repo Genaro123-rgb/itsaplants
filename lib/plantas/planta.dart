@@ -12,6 +12,7 @@ class Planta extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
+          
           SliverAppBar(
             title: Text(titulo, style: TextStyle(color: const Color.fromARGB(255, 231, 21, 21), fontWeight: FontWeight.bold),), 
             pinned: true,
@@ -19,9 +20,27 @@ class Planta extends StatelessWidget {
             expandedHeight: 200,
             backgroundColor: Colors.green,
             flexibleSpace: FlexibleSpaceBar(
-              background: _plantaImagen(), // Llama al método aquí
+              background: Stack(
+                fit: StackFit.expand,
+                children: <Widget> [
+              _plantaImagen(), // Llama al método aquí
+              const DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.center,
+                  end: Alignment(0.0, 0.1),
+                  colors: <Color>[
+                    Color(0x60000000),
+                    Color(0x00000000),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
+          ),    
+                
           SliverList(
               delegate: SliverChildListDelegate(
             [

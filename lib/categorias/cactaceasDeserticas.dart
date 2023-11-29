@@ -47,7 +47,7 @@ class _cactaceasDeserticas extends State<cactaceasDeserticas> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => Planta(
-                            titulo: "Yucca",
+                            titulo: "Yuccarr",
                             imgPath: "img/cenizo.jpeg",
                             descripcion: 'Yucca rostrata es una planta que alcanza los 4,5 m de altura. '
     'Tiene delgadas hojas que surgen de una roseta simétrica. '
