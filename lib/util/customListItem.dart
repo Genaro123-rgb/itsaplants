@@ -32,19 +32,20 @@ class CustomListItem extends StatelessWidget {
         child: Row(children: [
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Image.asset(imagePath), // Uso del parámetro imagePath
+            child: Image.asset(imagePath, height: 100, width: 105,), // Uso del parámetro imagePath
           ),
           SizedBox(
             width: 10,
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 commonName, // Uso del parámetro commonName
                 style: GoogleFonts.orelegaOne(
                   textStyle: TextStyle(
-                    fontSize: 20,
+                    fontSize: 25,
                   ),
                 ),
               ),

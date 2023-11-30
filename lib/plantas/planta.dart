@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Planta extends StatelessWidget {
   final String titulo;
@@ -12,16 +13,36 @@ class Planta extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
+          
           SliverAppBar(
-            title: Text(titulo, style: TextStyle(color: const Color.fromARGB(255, 231, 21, 21), fontWeight: FontWeight.bold),), 
+            title: Text(titulo, style: GoogleFonts.orelegaOne(textStyle: TextStyle(fontSize: 40, color: Colors.white))), 
             pinned: true,
+            iconTheme: IconThemeData(color: Colors.white),
             floating: true,
             expandedHeight: 200,
             backgroundColor: Colors.green,
             flexibleSpace: FlexibleSpaceBar(
-              background: _plantaImagen(), // Llama al método aquí
+              background: Stack(
+                fit: StackFit.expand,
+                children: <Widget> [
+              _plantaImagen(), // Llama al método aquí
+              const DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.center,
+                  end: Alignment(0.0, 0.1),
+                  colors: <Color>[
+                    Color(0x60000000),
+                    Color(0x00000000),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
+          ),    
+                
           SliverList(
               delegate: SliverChildListDelegate(
             [
@@ -48,6 +69,7 @@ class Planta extends StatelessWidget {
       child: Text(
         descripcion, // Usa la variable de instancia descripcion
         softWrap: true,
+        style: GoogleFonts.orelegaOne(textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
       ),
     );
   }

@@ -66,7 +66,31 @@ flutter:
     - img/hizache.jpg
     - img/mezquite.jpg
     - img/LogotipoTecNM.png
-  #   - images/a_dot_ham.jpeg
+    - img/Fresno.jpg
+    - img/algodon.jpg
+    - img/cactus_arcoiris.png
+    - img/Cactus_de_Lily.jpg
+    - img/Candelilla.jpg
+    - img/Cardon.jpg
+    - img/cedro.jpg
+    - img/cegadora_ondulada.jpg
+    - img/cenizo.jpg
+    - img/crespon.jpg
+    - img/girasol_silvestre.jpg
+    - img/Huizache.jpg
+    - img/Maguey_Amarillo.jpg
+    - img/Maguey_blanco.jpg
+    - img/Mezquite_Amarillo.jpg
+    - img/mezquite.png
+    - img/Nopal_monstruoso.jpg
+    - img/Ocotillo_o_albarda.jpg
+    - img/palmito.jpg
+    - img/Planta_lagarto.jpg
+    - img/Strawberry_cactus.jpg
+    - img/Texas_Bluebonnet.jpg
+    - img/viznaga_ganchuda.png
+    - img/Yuca.jpg
+  # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
